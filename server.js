@@ -25,10 +25,10 @@ app.use(bodyParser());
 app.set("view engine", "ejs");
 
 // Require Passport
-app.use(session({ secret: "ilovescotchscotchyscotchscotch" }));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(flash());
+// app.use(session({ secret: "ilovescotchscotchyscotchscotch" }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(flash());
 
 // Routes
 require('./app/routes.js')(app, passport);

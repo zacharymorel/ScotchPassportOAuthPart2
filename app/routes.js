@@ -26,13 +26,17 @@ module.exports = function(app, passport) {
     // ======= SIGN UP ==============
     // ==============================
     app.get('/signup', (req, res) => {
-        res.render('singup.ejs', {message: req.flash('singupMessage')})
+        res.render('signup.ejs', {message: req.flash('singupMessage')})
     })
 
     // ==============================
     // ====== SIGN UP CREATE ========
     // ==============================
-    // app.post('/signup',)
+    app.post('/signup', passport.authenticate('local-signup', {
+        successRedirect : '/profile',
+        failureRedirect : '/signup',
+        faulireFlash : true
+    }))
 
     // ===============================
     // ===== PROFILE SECTION =========

@@ -1,0 +1,6 @@
+ - Authenticate()
+    - wat is it exactly doing / handeling?
+    - look at passport.js docs.
+
+ - app doesn't submit email info correctly?
+    - see Database x

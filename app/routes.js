@@ -1,4 +1,4 @@
-const isLoggedIn = require('./middeware').isLoggedIn;
+const isLoggedIn = require('./middleware').isLoggedIn;
 
 
 module.exports = function(app, passport) {

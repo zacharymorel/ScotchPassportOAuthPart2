@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1><span fa fa-sign-in></span> Signup</h1>
+
+        <!-- show any messages that come back with Authentication -->
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger">
+                <%= message %>
+            </div>
+        <% } %>
+
+                <!-- SIGNUP FORM -->
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+            </form>
+
+            <p>Already have an Account? <a href="/login"></a></p>
+            <p>Or go <a href="/">home</a>.</p>
+    </div>
+</body>
+
+</html>
